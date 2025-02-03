@@ -9,77 +9,48 @@
 <body>
   <header class="header">
     <h1 class="header__tittle">Conecta2Italia</h1>
-  </header>
-  <nav class="nav__container">
-    <div class="nav">
-      <ul class="nav-list">
-        <li><a class="nav-item" href="#">Inicio</a></li>
-        <li><a class="nav-item" href="#">Referencia</a></li>
-        <li><a class="nav-item" href="#">Servicios</a></li>
-      </ul>
-      <ul class="nav-contact">
-        <li class="nav-contact-item"><a href="#"><i class="fa fa-facebook">a</i></a></li>
-        <li class="nav-contact-item"><a href="#"><i class="fa fa-instagram">b</i></a></li>
-        <li class="nav-contact-item"><a href="#"><i class="fa fa-twitter">c</i></a></li>
-      </ul>
-    </div>
+  </header>   
+  <nav class="nav">
+    <ul class="nav-list">
+      <li><a class="nav-item" href="#">Inicio</a></li>
+      <li><a class="nav-item" href="#">Referencia</a></li>
+      <li><a class="nav-item" href="#">Servicios</a></li>
+    </ul>
+    <ul class="nav-contact">
+      <li class="nav-contact-item">
+        <a href="https://wa.me/393501482331" target="_blank">
+          <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+          <i class="fab fa-whatsapp" style="font-size: 40px; color: #25D366;"></i>
+        </a>
+      </li>
+      <li class="nav-contact-item">
+        <a href="https://mail.google.com/" target="_blank">
+          <img src="images/gmail_5968534.png" alt="Gmail" style="width: 40px; height: 40px;">
+        </a>
+      </li>
+    </ul>
   </nav>
-   <!-- banner -->
-   <section class="banner_main">
-    <div id="banner1" class="carousel slide" data-ride="carousel">
-       <ol class="carousel-indicators">
-          <li data-target="#banner1" data-slide-to="0" class="active"></li>
-          <li data-target="#banner1" data-slide-to="1"></li>
-          <li data-target="#banner1" data-slide-to="2"></li>
-       </ol>
-       <div class="carousel-inner">
-          <div class="carousel-item active">
-             <div class="container">
-                <div class="carousel-caption">
-                   <div class="text-bg">
-                      <h1> <span class="blu">Welcome <br></span>To Our Sunglasses</h1>
-                      <figure><img src="images/banner_img.png" alt="#"/></figure>
-                      <a class="read_more" href="#">Shop Now</a>
-                   </div>
-                </div>
-             </div>
-          </div>
-          <div class="carousel-item">
-             <div class="container">
-                <div class="carousel-caption">
-                   <div class="text-bg">
-                      <h1> <span class="blu">Welcome <br></span>To Our Sunglasses</h1>
-                      <figure><img src="images/banner_img.png" alt="#"/></figure>
-                      <a class="read_more" href="#">Shop Now</a>
-                   </div>
-                </div>
-             </div>
-          </div>
-          <div class="carousel-item">
-             <div class="container">
-                <div class="carousel-caption">
-                   <div class="text-bg">
-                      <h1> <span class="blu">Welcome <br></span>To Our Sunglasses</h1>
-                      <figure><img src="images/banner_img.png" alt="#"/></figure>
-                      <a class="read_more" href="#">Shop Now</a>
-                   </div>
-                </div>
-             </div>
-          </div>
-       </div>
-       <a class="carousel-control-prev" href="#banner1" role="button" data-slide="prev">
-       <i class="fa fa-arrow-left" aria-hidden="true"></i>
-       </a>
-       <a class="carousel-control-next" href="#banner1" role="button" data-slide="next">
-       <i class="fa fa-arrow-right" aria-hidden="true"></i>
-       </a>
-    </div>
- </section>
- <!-- end banner -->
+  <div class="carousel">
+   <button class="arrow left" onclick="prevImage()">&#8592;</button>
+   <div class="image-slider">
+     <div class="image-container">
+       <img src="sunglasses1.png" alt="Sunglasses 1">
+     </div>
+     <div class="image-container">
+       <img src="sunglasses2.png" alt="Sunglasses 2">
+     </div>
+     <div class="image-container">
+       <img src="sunglasses3.png" alt="Sunglasses 3">
+     </div>
+   </div>
+   <button class="arrow right" onclick="nextImage()">&#8594;</button>
+ </div>
+</div>
   <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sint mollitia quidem doloribus expedita ex voluptatem quam quos labore minima debitis? Sed eligendi eaque vel error in. Ipsam doloribus dolores repudiandae?Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eaque iusto cupiditate deserunt architecto dolor odit at reiciendis earum soluta? Porro ab, eveniet nobis quibusdam perspiciatis iste consequatur. Inventore, error fuga Lorem ipsum dolor sit, amet consectetur adipisicing elit. Non harum quibusdam odit sequi quidem quod consectetur doloribus labore alias! Pariatur, cum praesentium! Deleniti ratione eaque autem quos sed, sit veritatis? Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus aliquid veniam commodi quibusdam aspernatur distinctio cum voluptates magni sequi nam! Voluptatum, sequi. Molestias, deleniti expedita tempora adipisci rerum quo ratione?></p>
   <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sint mollitia quidem doloribus expedita ex voluptatem quam quos labore minima debitis? Sed eligendi eaque vel error in. Ipsam doloribus dolores repudiandae?Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eaque iusto cupiditate deserunt architecto dolor odit at reiciendis earum soluta? Porro ab, eveniet nobis quibusdam perspiciatis iste consequatur. Inventore, error fuga Lorem ipsum dolor sit, amet consectetur adipisicing elit. Non harum quibusdam odit sequi quidem quod consectetur doloribus labore alias! Pariatur, cum praesentium! Deleniti ratione eaque autem quos sed, sit veritatis? Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus aliquid veniam commodi quibusdam aspernatur distinctio cum voluptates magni sequi nam! Voluptatum, sequi. Molestias, deleniti expedita tempora adipisci rerum quo ratione?></p>
   <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sint mollitia quidem doloribus expedita ex voluptatem quam quos labore minima debitis? Sed eligendi eaque vel error in. Ipsam doloribus dolores repudiandae?Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eaque iusto cupiditate deserunt architecto dolor odit at reiciendis earum soluta? Porro ab, eveniet nobis quibusdam perspiciatis iste consequatur. Inventore, error fuga Lorem ipsum dolor sit, amet consectetur adipisicing elit. Non harum quibusdam odit sequi quidem quod consectetur doloribus labore alias! Pariatur, cum praesentium! Deleniti ratione eaque autem quos sed, sit veritatis? Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus aliquid veniam commodi quibusdam aspernatur distinctio cum voluptates magni sequi nam! Voluptatum, sequi. Molestias, deleniti expedita tempora adipisci rerum quo ratione?></p>
   <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sint mollitia quidem doloribus expedita ex voluptatem quam quos labore minima debitis? Sed eligendi eaque vel error in. Ipsam doloribus dolores repudiandae?Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eaque iusto cupiditate deserunt architecto dolor odit at reiciendis earum soluta? Porro ab, eveniet nobis quibusdam perspiciatis iste consequatur. Inventore, error fuga Lorem ipsum dolor sit, amet consectetur adipisicing elit. Non harum quibusdam odit sequi quidem quod consectetur doloribus labore alias! Pariatur, cum praesentium! Deleniti ratione eaque autem quos sed, sit veritatis? Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus aliquid veniam commodi quibusdam aspernatur distinctio cum voluptates magni sequi nam! Voluptatum, sequi. Molestias, deleniti expedita tempora adipisci rerum quo ratione?></p>
   <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sint mollitia quidem doloribus expedita ex voluptatem quam quos labore minima debitis? Sed eligendi eaque vel error in. Ipsam doloribus dolores repudiandae?Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eaque iusto cupiditate deserunt architecto dolor odit at reiciendis earum soluta? Porro ab, eveniet nobis quibusdam perspiciatis iste consequatur. Inventore, error fuga Lorem ipsum dolor sit, amet consectetur adipisicing elit. Non harum quibusdam odit sequi quidem quod consectetur doloribus labore alias! Pariatur, cum praesentium! Deleniti ratione eaque autem quos sed, sit veritatis? Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus aliquid veniam commodi quibusdam aspernatur distinctio cum voluptates magni sequi nam! Voluptatum, sequi. Molestias, deleniti expedita tempora adipisci rerum quo ratione?></p>
-</body>
+
+  <script src="script.js"></script></body>
 </html>

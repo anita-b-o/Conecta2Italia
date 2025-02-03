@@ -19,23 +19,23 @@ body, header, div, h1, nav, ul, li {
   color: aliceblue;
 }
 
-.nav__container {
+.nav {
   position: sticky;
   top: 0;
   z-index: 1000;
-  background-color: aqua;
-  width: 100%;
-  display: flex;
-  justify-content: center;
-}
-
-.nav {
-  width: 70%;
   background-color: #F5F5F5;
-  border: 1px solid #000;
-  border-radius: 0 0 10px 10px;
+  border-top: 1px solid #000;
+  border-bottom: 1px solid #000;
   display: flex;
   justify-content: space-between;
+}
+
+.nav-list {
+  padding-left: 5%;
+}
+
+.nav-contact {
+  padding-right: 5%;
 }
 
 .nav-list, .nav-contact {
@@ -48,73 +48,38 @@ body, header, div, h1, nav, ul, li {
   padding: 8px;
 }
 
-
-.banner_main {
-  background: #f5f6f6;
-  padding: 198px 0px 90px 0px;
+.carousel {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+  width: 100%;
 }
 
-.text-bg {
-  text-align: center;
+.arrow {
+  font-size: 2rem;
+  border: none;
+  background: none;
+  cursor: pointer;
+  z-index: 10;
 }
 
-.text-bg h1 {
-  color: #070404;
-  font-size: 60px;
-  line-height: 76px;
-  padding-bottom: 45px;
-  font-weight: bold;
-  text-transform: uppercase;
+.image-slider {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+  width: 100%;
 }
 
-.text-bg .read_more {
-  border: #1a1a1a solid 2px;
-  color: #1a1a1a !important;
-  font-weight: 500;
-  display: block;
-  margin: 0 auto;
-  margin-top: 44px;
+.image-container {
+  min-width: 100%;
+  display: flex;
+  justify-content: center;
 }
 
-#banner1 .carousel-caption {
-  position: inherit;
-  padding: 0;
-}
-
-#banner1 .carousel-indicators {
-  display: none;
-}
-
-#banner1 .carousel-control-prev,
-#banner1 .carousel-control-next {
-  width: 62px;
-  height: 60px;
-  background: transparent;
-  border: #1a1a1a solid 2px;
-  opacity: 1;
-  font-size: 30px;
-  color: #131215;
-  border-radius: 60px;
-  top: 43%;
-}
-
-#banner1 .carousel-control-prev:hover,
-#banner1 .carousel-control-next:hover,
-#banner1 .carousel-control-prev:focus,
-#banner1 .carousel-control-next:focus {
-  background: transparent;
-  border: #03cafc solid 2px;
-  color: #03cafc;
-}
-
-#banner1 a.carousel-control-prev {
-  position: absolute;
-  left: 20px;
-  bottom: 10px;
-}
-
-#banner1 a.carousel-control-next {
-  position: absolute;
-  right: 20px;
-  bottom: 10px;
+.image-container img {
+  width: 100%;
+  max-width: 400px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
