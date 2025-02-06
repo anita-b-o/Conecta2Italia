@@ -1,26 +1,29 @@
-let currentIndex = 0;
+let currentIndex = 3;
+const itemsPerView = 1;
+const slider = document.querySelector('.slider-container');
+const totalButtons = document.querySelectorAll('.button-container').length;
 
-function showImage(index) {
-  const slider = document.querySelector('.image-slider');
-  const totalImages = document.querySelectorAll('.image-container').length;
+function updateSlider() {
+  const offset = -(currentIndex * 110);
+  slider.style.transform = `translateX(${offset}px)`;
+}
 
-  // Loop the carousel
-  if (index < 0) {
-    currentIndex = totalImages - 1;
-  } else if (index >= totalImages) {
-    currentIndex = 0;
+function prevSlide() {
+  if (currentIndex > 0) {
+    currentIndex--;
   } else {
-    currentIndex = index;
+    currentIndex = Math.max(0, totalButtons - itemsPerView);
   }
-
-  const offset = -currentIndex * 100;
-  slider.style.transform = `translateX(${offset}%)`;
+  updateSlider();
 }
 
-function prevImage() {
-  showImage(currentIndex - 1);
+function nextSlide() {
+  if (currentIndex < totalButtons - itemsPerView) {
+    currentIndex++;
+  } else {
+    currentIndex = 0;
+  }
+  updateSlider();
 }
 
-function nextImage() {
-  showImage(currentIndex + 1);
-}
+updateSlider();

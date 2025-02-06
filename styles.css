@@ -53,33 +53,43 @@ body, header, div, h1, nav, ul, li {
   align-items: center;
   justify-content: center;
   position: relative;
+  max-width: 90%;
+  background-color: #363A5F;
+  margin: auto;
+}
+
+.slider-wrapper {
   overflow: hidden;
-  width: 100%;
+  width: 90%;
+}
+
+.slider-container {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.button-container {
+  flex: 0 0 150; 
+  text-align: center;
+  margin: 0 5px;
+  background-color: aqua;
+}
+
+.button-container img {
+  background-color: #363A5F;
+  width: 250px;
+  height: 200px;
 }
 
 .arrow {
-  font-size: 2rem;
+  background-color: #ddd;
   border: none;
-  background: none;
   cursor: pointer;
-  z-index: 10;
+  font-size: 24px;
+  padding: 10px;
+  margin: 0 10px;
 }
 
-.image-slider {
-  display: flex;
-  transition: transform 0.5s ease-in-out;
-  width: 100%;
-}
 
-.image-container {
-  min-width: 100%;
-  display: flex;
-  justify-content: center;
-}
 
-.image-container img {
-  width: 100%;
-  max-width: 400px;
-  border-radius: 10px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
+
