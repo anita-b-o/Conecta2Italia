@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
   <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
 </head>
 <body>
   <header class="header">
@@ -30,44 +31,67 @@
       </li>
     </ul>
   </nav>
-  <main>
-    <div>
-      
-    </div>
-    <div class="carousel">
-      <button class="arrow left" onclick="prevSlide()">&lt;</button>
-      <div class="slider-wrapper">
-        <div class="slider-container">
-          <div class="button-container">
-            <img src="images/bandera-italia.jpeg" alt="">
-            <p class="description">Descripción 1</p>
-          </div>
-          <div class="button-container">
-            <img src="images/banderaargentina.png" alt="">
-            <p class="description">Descripción 2</p>
-          </div>
-          <div class="button-container">
-            <img src="images/bandera-italia.jpeg" alt="">
-            <p class="description">Descripción 3</p>
-          </div>
-          <div class="button-container">
-            <img src="images/banderaargentina.png" alt="">
-            <p class="description">Descripción 4</p>
-          </div>
-          <div class="button-container">
-            <img src="images/bandera-italia.jpeg" alt="">
-            <p class="description">Descripción 5</p>
-          </div>
-          <div class="button-container">
-            <img src="images/banderaargentina.png" alt="">
-            <p class="description">Descripción 5</p>
-          </div>
-        </div>
+  <div class="container">
+    <div class="container swiper">
+      <div class="card-wrapper">
+        <ul class="card-list swiper-wrapper">
+          <li class="card-item swiper-slide">
+            <a href="#" class="card-link">
+              <img src="images/bandera-italia.jpeg" alt="" class="card-image">
+              <p class="badge">Develop</p>
+              <h2 class="card-title">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Omnis voluptatibus vitae, iste modi dolore incidunt laudantium eligendi harum sint adipisci, hic rerum pariatur animi reiciendis atque quidem aperiam velit accusantium?</h2>
+              <button class="card-button">&lt</button>
+            </a>
+          </li>
+          <li class="card-item swiper-slide">
+            <a href="#" class="card-link">
+              <img src="images/banderaargentina.png" alt="" class="card-image">
+              <p class="badge">Develop</p>
+              <h2 class="card-title">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Omnis voluptatibus vitae, iste modi dolore incidunt laudantium eligendi harum sint adipisci, hic rerum pariatur animi reiciendis atque quidem aperiam velit accusantium?</h2>
+              <button class="card-button">&lt</button>
+            </a>
+          </li>
+          <li class="card-item swiper-slide">
+            <a href="#" class="card-link">
+              <img src="images/bandera-italia.jpeg" alt="" class="card-image">
+              <p class="badge">Develop</p>
+              <h2 class="card-title">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Omnis voluptatibus vitae, iste modi dolore incidunt laudantium eligendi harum sint adipisci, hic rerum pariatur animi reiciendis atque quidem aperiam velit accusantium?</h2>
+              <button class="card-button">&lt</button>
+            </a>
+          </li>
+          <li class="card-item swiper-slide">
+            <a href="#" class="card-link">
+              <img src="images/banderaargentina.png" alt="" class="card-image">
+              <p class="badge">Develop</p>
+              <h2 class="card-title">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Omnis voluptatibus vitae, iste modi dolore incidunt laudantium eligendi harum sint adipisci, hic rerum pariatur animi reiciendis atque quidem aperiam velit accusantium?</h2>
+              <button class="card-button">&lt</button>
+            </a>
+          </li>
+          <li class="card-item swiper-slide">
+            <a href="#" class="card-link">
+              <img src="images/bandera-italia.jpeg" alt="" class="card-image">
+              <p class="badge">Develop</p>
+              <h2 class="card-title">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Omnis voluptatibus vitae, iste modi dolore incidunt laudantium eligendi harum sint adipisci, hic rerum pariatur animi reiciendis atque quidem aperiam velit accusantium?</h2>
+              <button class="card-button">&lt</button>
+            </a>
+          </li>
+          <li class="card-item swiper-slide">
+            <a href="#" class="card-link">
+              <img src="images/banderaargentina.png" alt="" class="card-image">
+              <p class="badge">Develop</p>
+              <h2 class="card-title">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Omnis voluptatibus vitae, iste modi dolore incidunt laudantium eligendi harum sint adipisci, hic rerum pariatur animi reiciendis atque quidem aperiam velit accusantium?</h2>
+              <button class="card-button">&lt</button>
+            </a>
+          </li>
+        </ul>
+        <div class="swiper-pagination"></div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
       </div>
-      <button class="arrow right" onclick="nextSlide()">&gt;</button>
     </div>
+  </div>  
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
-  </main>  
   <script src="script.js"></script>
 </body>
 </html>

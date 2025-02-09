@@ -1,8 +1,5 @@
 * {
   box-sizing: border-box;
-}
-
-body, header, div, h1, nav, ul, li {
   margin: 0;
   padding: 0;
 }
@@ -11,12 +8,12 @@ body, header, div, h1, nav, ul, li {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #363A5F;
+  background-color: #008C45;
   height: 8rem;
 }
 
 .header__tittle {
-  color: aliceblue;
+  color: #E5E5E5;
 }
 
 .nav {
@@ -48,48 +45,80 @@ body, header, div, h1, nav, ul, li {
   padding: 8px;
 }
 
-.carousel {
+.container {
   display: flex;
   align-items: center;
   justify-content: center;
-  position: relative;
-  max-width: 90%;
-  background-color: #363A5F;
-  margin: auto;
+  min-height: 100vh;
+  background-color: #9B1B20;
 }
 
-.slider-wrapper {
+.card-wrapper {
+  max-width: 1100px;
+  margin: 0 60px 35px;
+  padding: 20px 10px;
   overflow: hidden;
-  width: 90%;
 }
 
-.slider-container {
-  display: flex;
-  transition: transform 0.5s ease-in-out;
+.card-list .card-item {
+  list-style: none;
 }
 
-.button-container {
-  flex: 0 0 150; 
-  text-align: center;
-  margin: 0 5px;
-  background-color: aqua;
+.card-list .card-item .card-link {
+  user-select: none;
+  display: block;
+  background-color: #FFF;
+  padding: 18px;
+  border-radius: 12px;
+  text-decoration: none;
+  border: 2px solid transparent;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.05);
+  transition: 0.2s ease;
 }
 
-.button-container img {
-  background-color: #363A5F;
-  width: 250px;
-  height: 200px;
+.card-list .card-item .card-link:hover {
+  border-color: #CD212A;
 }
 
-.arrow {
-  background-color: #ddd;
-  border: none;
+.card-list .card-link .card-image {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.card-list .card-link .badge {
+  padding: 8px 16px;
+  font-size: 0.95rem;
+  color: #363A5F;
+  font-weight: 500;
+  margin: 16px 0 18px;
+  background: #DDE4FF;
+  width: fit-content;
+  border-radius: 50px;
+}
+
+.card-list .card-link .card-title {
+  font-size: 1.19rem;
+  color: #000;
+  font-weight: 600;
+}
+
+.card-list .card-link .card-button {
+  height: 35px; 
+  width: 35px;
+  color: #CD212A;
+  border-radius: 50%;
+  margin: 30px 0 5px;
+  background: none;
   cursor: pointer;
-  font-size: 24px;
-  padding: 10px;
-  margin: 0 10px;
+  border: 2px solid #CD212A;
+  transform: rotate(-45deg);
+  transition: 0.4s ease;
 }
 
-
-
+.card-list .card-link:hover .card-button {
+  color: #FFF;
+  background: #CD212A;
+}
 

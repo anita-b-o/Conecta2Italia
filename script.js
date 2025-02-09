@@ -1,29 +1,29 @@
-let currentIndex = 3;
-const itemsPerView = 1;
-const slider = document.querySelector('.slider-container');
-const totalButtons = document.querySelectorAll('.button-container').length;
+new Swiper('.card-wrapper', {
+  loop: true,
+  spaceBetween: 30,
 
-function updateSlider() {
-  const offset = -(currentIndex * 110);
-  slider.style.transform = `translateX(${offset}px)`;
-}
+  // pagination bullets
+  pagination: {
+    el: '.swiper-pagination',
+    clickeable: true,
+    dynamicBullets: true
+  },
 
-function prevSlide() {
-  if (currentIndex > 0) {
-    currentIndex--;
-  } else {
-    currentIndex = Math.max(0, totalButtons - itemsPerView);
+  // Navigation arrows
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
+
+  breakpoints: {
+    0: {
+      slidesPerView: 1
+    },
+    768: {
+      slidesPerView: 2
+    },
+    1024: {
+      slidesPerView: 3
+    },
   }
-  updateSlider();
-}
-
-function nextSlide() {
-  if (currentIndex < totalButtons - itemsPerView) {
-    currentIndex++;
-  } else {
-    currentIndex = 0;
-  }
-  updateSlider();
-}
-
-updateSlider();
+});
