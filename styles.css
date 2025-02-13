@@ -9,19 +9,22 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #008C45;
-  height: 8rem;
+  background-color: #4a6a8a ;
+  height: 11rem;
   color: #E5E5E5;
 }
 
+.header__title {
+  font-weight: 400;
+  font-size: 2.2rem;
+}
 
 .nav {
   position: sticky;
   top: 0;
   z-index: 1000;
-  background-color: #F5F5F5;
-  border-top: 1px solid #000;
-  border-bottom: 1px solid #000;
+  background-color: #FFF;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.05);
   display: flex;
   justify-content: space-between;
 }
@@ -45,6 +48,16 @@
 }
 
 .nav-item {
+  color: #000;
+  font-weight: 500;
+  font-size: larger;
+}
+
+.nav-item:hover {
+  color: #4a6a8a;
+}
+
+.nav-item {
   text-decoration: none;
 }
 
@@ -53,7 +66,7 @@
   align-items: center;
   justify-content: center;
   min-height: 100vh;
-  background-color: #631013;
+  background: linear-gradient(#ECEFFE, #a0bccc);
 }
 .card-wrapper {
   max-width: 1100px;
@@ -89,7 +102,7 @@
   border-radius: 10px;
 }
 
-.card-list .card-link {
+.card-list .card-link .badge {
   padding: 8px 16px;
   font-size: 0.95rem;
   color: #363A5F;
@@ -101,7 +114,7 @@
 }
 
 .card-list .card-link .card-title {
-  font-size: 1.19rem;
+  font-size: 1rem;
   color: #000;
   font-weight: 600;
 }
@@ -196,3 +209,13 @@ textarea {
 
 
 
+/* 
+.color1 { #ab8052; }  Marrón claro 
+.color2 { #a0bfdb; }  Celeste 
+.color3 { #7e5032; }  Marrón oscuro 
+.color4 { #7494b4; }  Azul medio 
+.color5 { #a0bccc; }  Azul claro 
+.color6 { #4a6a8a; }  Azul oscuro 
+.color7 { #ffffff; }  Blanco 
+.color8 { #8c8c8c; }  Gris 
+*/
