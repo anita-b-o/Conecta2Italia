@@ -72,9 +72,22 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  background-color: #7494b4;
-  width: 90%;
-  height: 50%;
+  width: 70%;
+  height: 75%;
+  border-radius: 40px;
+  display: flex;
+  align-items: center;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2);
+  padding-left: 5%;
+  padding-right: 5%;
+  background-image: url("images/paisaje_sierras_italia_desenfocado.png");
+}
+
+.text {
+  color: #fff;
+  font-weight: 550;
+  font-size: 1.2rem;
+  text-align: center;
 }
 
 .container-swiper {
@@ -172,7 +185,8 @@
   padding: 20px;
   background: #ffffff; /* Fondo blanco */
   border-radius: 10px; /* Bordes redondeados */
-  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2); /* Sombra para dar efecto de elevación */
+  /* box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2); Sombra para dar efecto de elevación */
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.05); /* cambie las sombras por unas mas claras. son las mismas que uso en los elementos de arriba, es para que tenga mas coherencia visual */
   margin: 50px auto; /* Centrar en la página */
   border: 2px solid #007bff; /* Borde con color atractivo */
   z-index: 100;
@@ -188,7 +202,8 @@ input, textarea {
   padding: 6px 12px;
   border: none;
   border: 1px solid #666;
-  box-shadow: 0px 0px 15px #0003;
+  /* box-shadow: 0px 0px 15px #0003; */
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.05); /* cambie las sombras por unas mas claras. son las mismas que uso en los elementos de arriba, es para que tenga mas coherencia visual */
   background-color: transparent;
   border-radius: 4px;
   color: #eee;
