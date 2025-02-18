@@ -50,43 +50,43 @@
       <div class="card-wrapper">
         <ul class="card-list swiper-wrapper">
           <li class="card-item swiper-slide">
-            <a onclick="location.href='busqueda_de_actas.html';" class="card-link">
+            <a class="card-link">
               <img src="images/busqueda-de-actas-img.jpg" alt="" class="card-image">
               <p class="badge">Búsqueda de actas</p>
               <h2 class="card-title">Te facilitamos el proceso de obtención de un documento esencial, enviando el acta directamente a tu domicilio. Con la información que nos proporcionas, iniciamos el trámite y solo abonas una vez que confirmamos el envío del acta.</h2>
-              <button class="card-button">CONTACTAR</button>
+              <button class="card-button" data-option="busqueda de actas" onclick="redirigirAlFormulario('Busqueda de Actas')">CONTACTAR</button>
             </a>
           </li>
           <li class="card-item swiper-slide">
-            <a onclick="location.href='fijar_recidencia.html';" class="card-link">
-              <img src="images/fijar-recidencia-img.jpg" alt="" class="card-image">
-              <p class="badge">Fijar recidencia</p>
+            <a class="card-link">
+              <img src="images/fijar-residencia-img.jpg" alt="" class="card-image">
+              <p class="badge">Fijar residencia</p>
               <h2 class="card-title">Encontrar una vivienda para iniciar el trámite de ciudadanía puede ser un desafío. Con este servicio, te garantizamos un alojamiento completamente equipado desde tu llegada, brindándote tranquilidad y permitiéndote optimizar tiempo y recursos para el resto de tu proceso y estadía.</h2>
-              <button class="card-button">CONTACTAR</button>
+              <button class="card-button" data-option="fijar residencia" onclick="redirigirAlFormulario('Fijar Residencia')">CONTACTAR</button>
             </a>
           </li>
           </li>
           <li class="card-item swiper-slide">
-            <a onclick="location.href='armado_de_carpetas.html';" class="card-link">
+            <a class="card-link">
               <img src="images/armado-de-carpetas-img.jpg" alt="" class="card-image">
               <p class="badge">Armado de carpetas</p>
               <h2 class="card-title">Verificamos que tu carpeta esté correctamente preparada. Si aún no la tienes, te asistimos en su elaboración desde cero, asegurando que cumpla con todos los requisitos necesarios.</h2>
-              <button class="card-button">CONTACTAR</button>
+              <button class="card-button" data-option="armado de carpetas" onclick="redirigirAlFormulario('Armado de Carpetas')">CONTACTAR</button>
             </a>
           </li>
           <li class="card-item swiper-slide">
-            <a onclick="location.href='entrevista_de_asesoramiento.html';" class="card-link">
+            <a class="card-link">
               <img src="images/entrevista-de-asesoramiento-img.jpg" alt="" class="card-image">
               <p class="badge">Entrevista de asesoramiento</p>
               <h2 class="card-title">En esta reunión, obtendrás la orientación precisa según tus dudas o inquietudes. Te recomendamos anotar todas tus preguntas, pero si olvidas algo, no te preocupes: el chat post-reunión permanecerá abierto por 72 horas para cualquier consulta adicional.</h2>
-              <button class="card-button">CONTACTAR</button>
+              <button class="card-button" data-option="entrevista de asesoramiento" onclick="redirigirAlFormulario('Entrevista de Asesoramiento')">CONTACTAR</button>
             </a>
           <li class="card-item swiper-slide">
-            <a onclick="location.href='Asseverazione.html';" class="card-link">
+            <a class="card-link">
               <img src="images/asseverazione-img.jpg" alt="" class="card-image">
               <p class="badge">Asseverazione</p>
               <h2 class="card-title">Si ya cuentas con toda la documentación y estás listo para viajar, nosotros nos encargamos de la certificación en los tribunales de Roma. De este modo, tu carpeta quedará completamente lista para su presentación.</h2>
-              <button class="card-button">CONTACTAR</button>
+              <button class="card-button" data-option="asseverazione" onclick="redirigirAlFormulario('Asseverazione')">CONTACTAR</button>
             </a>
           </li>
         </ul>
@@ -97,27 +97,29 @@
     </div>
   </div>  
   <div id="contacto" class="container_formulario">
-    <form class="form">
-      <h2 class="form-title">
-        Formulario de contacto
-      </h2>
-      <div class="form_input">
-        <input type="text"
-        placeholder="Nombre completo">
-      </div>
-      <div class="form_input">
-        <input type="tel" 
-        placeholder="Telefono">
-      </div>
-      <div class="form_input">
-        <input type="email"
-        placeholder="Email">
-      </div>
-      <div class="form_input">
-        <textarea class="form_input-textarea" placeholder="Motivo de interes"></textarea>
-      </div>
+    <form class="form" id="contact-form" action="send_email.php" method="POST">
+      <h2 class="form-title">Formulario de contacto</h2>
+        <div class="form_input">
+            <input type="text" id="nombre" name="nombre" placeholder="Nombre completo" required>
+        </div>
+        <div class="form_input">
+            <input type="tel" id="telefono" name="telefono" placeholder="Teléfono" required>
+        </div>
+        <div class="form_input">
+            <input type="email" id="email" name="email" placeholder="Email" required>
+        </div>
+        <div class="form_input">
+            <textarea id="mensaje" class="form_input-textarea" name="mensaje" placeholder="Motivo de interés"></textarea>
+        </div>
+
+        <!-- Input oculto para la opción seleccionada -->
+        <input type="hidden" id="opcionSeleccionada" name="opcionSeleccionada" value="Entrevista de Asesoramiento"> 
+        
+        <div class="form_input">
+            <button type="submit" class="form_button">Enviar</button>
+        </div>
     </form> 
-  </div>
+</div>
   <div class="references" id="referencia"></div>
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
   <script src="script.js"></script>

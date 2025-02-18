@@ -183,6 +183,7 @@
 }
 
 input, textarea {
+  font-family: 'Inter', sans-serif;
   width: 100%;
   box-sizing: border-box;
   padding: 6px 12px;
@@ -191,7 +192,7 @@ input, textarea {
   box-shadow: 0px 0px 15px #0003;
   background-color: transparent;
   border-radius: 4px;
-  color: #eee;
+  color: #0d0d0d;
 }
 
 .form_input-textarea {
@@ -205,7 +206,8 @@ input, textarea {
 .container_formulario {
   width: 100%;
   height: 100vh;
-  background-image: url('images/paisaje_nublado_con_gata_italia.jpeg');
+  background-image: url('images/paisaje-nublado-con-gata-italia-small.jpeg'); /* Imagen de fondo */
+  filter: brightness(0.6);
   background-size: cover;
   background-position: center;
   display: flex;
@@ -213,6 +215,67 @@ input, textarea {
   justify-content: center;
   position: relative;
 }
+
+.form {
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+  background: #ffffff;
+  border-radius: 10px;
+  width: 400px;
+  padding: 20px;
+  border: 2px solid #007bff;
+  margin: 50px auto;
+}
+
+.form_input {
+  padding: 6px 20px;
+}
+
+input, textarea {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 6px 12px;
+  border: 1px solid #666;
+  border-radius: 4px;
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+  font-family: 'Inter', sans-serif;
+}
+
+textarea {
+  min-height: 100px;
+  max-height: 200px;
+  resize: none;
+}
+
+.opcion-button {
+  display: block;
+  margin: 20px auto;
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.opcion-button:hover {
+  background-color: #0056b3;
+}
+
+.form_button {
+  width: 100%;
+  padding: 10px;
+  background-color: #28a745;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.form_button:hover {
+  background-color: #218838;
+}
+
 
 /* 
 .color1 { #ab8052; }  Marrón claro 
