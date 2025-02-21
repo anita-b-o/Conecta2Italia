@@ -78,9 +78,10 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 });
 
+document.addEventListener("DOMContentLoaded", function () {
+  const nav = document.querySelector(".nav");
 
-
-
-
-
-
+  nav.addEventListener("click", function () {
+      nav.classList.toggle("active");
+  });
+});
