@@ -469,6 +469,7 @@ input:focus, textarea:focus {
   }
 }
 
+<<<<<<< HEAD
 .footer {
   background-color: #4a6a8a;
   color: white;
@@ -506,6 +507,86 @@ input:focus, textarea:focus {
 }
 
 
+=======
+.slider-frame {
+  width: 100vw;   /* Ocupa todo el ancho de la pantalla */
+  max-width: 100%; /* Asegura que no sobrepase el ancho */
+  height: 70vh;   /* Ocupa la mitad de la pantalla en altura */
+  max-height: 600px; /* Limita el tamaño vertical */
+  margin: 0 auto;
+  overflow: hidden;
+  position: relative;
+}
+
+.slider-frame ul {
+  display: flex;
+  padding: 0;
+  width: 500%;
+  height: 100%;
+  animation: slide 15s infinite ease-in-out;
+}
+
+.slider-frame li {
+  list-style: none;
+  width: 100%;
+}
+
+.slider-frame img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain; /* Mantiene la imagen ajustada sin distorsión */
+}
+
+/* ANIMACIÓN */
+@keyframes slide {
+  0% { margin-left: 0%; }
+  16% { margin-left: 0%; }
+
+  20% { margin-left: -100%; }
+  36% { margin-left: -100%; }
+
+  40% { margin-left: -200%; }
+  56% { margin-left: -200%; }
+
+  60% { margin-left: -300%; }
+  76% { margin-left: -300%; }
+
+  80% { margin-left: -400%; }
+  96% { margin-left: -400%; }
+
+  /* Transición suave al volver a la primera imagen */
+  100% { margin-left: 0%; }
+}
+
+
+/* MEDIA QUERIES PARA DIFERENTES DISPOSITIVOS */
+
+/* Para pantallas grandes (PC y laptops) */
+@media (min-width: 1024px) {
+  .slider-frame {
+    height: 60vh; /* Un poco más grande en pantallas grandes */
+  }
+}
+
+/* Para tablets */
+@media (max-width: 1023px) {
+  .slider-frame {
+    height: 50vh; /* Ajuste en tablets */
+  }
+}
+
+/* Para celulares */
+@media (max-width: 768px) {
+  .slider-frame {
+    height: 40vh; /* Reduce la altura en celulares */
+  }
+}
+
+
+
+
+
+>>>>>>> d3cc3cc (agregue imagenes provisorias y el slidel-frame)
 
 /* 
 .color1 { #ab8052; }  Marrón claro 
