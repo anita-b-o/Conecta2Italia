@@ -85,3 +85,20 @@ document.addEventListener("DOMContentLoaded", function () {
       nav.classList.toggle("active");
   });
 });
+
+document.addEventListener("DOMContentLoaded", function () {
+  const contactoBtn = document.querySelector(".contacto-btn");
+  const contactoList = document.querySelector(".contacto-list");
+
+  contactoBtn.addEventListener("click", function (e) {
+    e.preventDefault();
+    contactoList.classList.toggle("active");
+  });
+
+  // Opcional: Cerrar el menú al hacer clic fuera
+  document.addEventListener("click", function (event) {
+    if (!contactoBtn.contains(event.target) && !contactoList.contains(event.target)) {
+      contactoList.classList.remove("active");
+    }
+  });
+});

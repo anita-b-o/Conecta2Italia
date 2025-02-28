@@ -29,37 +29,6 @@
   left: 10px;
 }
 
-@media (max-width: 768px) {
-  .nav::before {
-    display: block;
-    z-index: 100;
-  }
-
-  .nav .container {
-    display: none;
-    padding: 60px;
-    height: 100vh;
-    padding-bottom: 50%;
-  }
-
-  .nav.active .container {
-    background-color: #fff;
-    position: absolute;
-    display: flex;
-    flex-direction: column;
-  }
-
-  .nav.active .nav-list {
-    display: flex;
-    flex-direction: column;
-  }
-
-  .nav-list li {
-    margin-bottom: 50%;
-  }
-
-}
-
 .nav {
   position: sticky;
   top: 0;
@@ -106,9 +75,40 @@
   text-decoration: none;
 }
 
+.contacto-list {
+  display: none;
+  list-style: none;
+  margin-top: 5px;
+  background: #fff;
+  border-radius: 5px;
+  position: absolute;
+}
+
+.contacto-list li {
+  padding: 10px 10px 10px 10px;
+}
+
+.contacto-list a {
+  text-decoration: none;
+  color: #000;
+  display: inline-block;
+}
+
+.contacto-list a:hover {
+ color: #7494b4;
+}
+
+.contacto-list.active {
+  display: block;
+}
+
 .container-inicio {
   height: 70vh;
-  background-color: #ECEFFE;
+  background-image: url("images/paisaje-sierras-italia-desenfocado.jpeg");
+  background-position: center bottom; 
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+  background-color: #3398e6;
   position: relative;
 }
 
@@ -117,7 +117,8 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 70%;
+  background-color: rgba(255, 255, 255, 0.6);
+  width: 60%;
   height: 75%;
   border-radius: 40px;
   display: flex;
@@ -125,16 +126,44 @@
   box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2);
   padding-left: 5%;
   padding-right: 5%;
-  background-image: url("images/paisaje_sierras_italia_desenfocado.png");
 }
 
 .text {
-  color: #fff;
+  color: #4a6a8a;
   font-weight: 550;
   font-size: 1.2rem;
   text-align: center;
 }
 
+@media (max-width: 900px) {
+  .text {
+    font-size: 1.1rem;
+  }
+
+}
+
+.container-images {
+  position: relative;
+  height: 70vh;
+}
+
+.image {
+  position: absolute;
+  bottom: 0;
+}
+
+.a {
+  max-width: 350px;
+  min-width: 220px;
+  width: 50%;
+}
+
+.b {
+  max-width: 235px;
+  min-width: 150px;
+  width: 35%;
+  right: 5%;
+}
 .container-swiper {
   display: flex;
   align-items: center;
@@ -230,10 +259,9 @@
   padding: 20px;
   background: #ffffff; /* Fondo blanco */
   border-radius: 10px; /* Bordes redondeados */
-  /* box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2); Sombra para dar efecto de elevación */
   box-shadow: 0 10px 10px rgba(0, 0, 0, 0.05); /* cambie las sombras por unas mas claras. son las mismas que uso en los elementos de arriba, es para que tenga mas coherencia visual */
   margin: 50px auto; /* Centrar en la página */
-  border: 2px solid #007bff; /* Borde con color atractivo */
+  border: 2px solid  #007bff; /* Borde con color atractivo */
   z-index: 100;
 }
 
@@ -246,9 +274,7 @@ input, textarea {
   width: 100%;
   box-sizing: border-box;
   padding: 6px 12px;
-  border: none;
   border: 1px solid #666;
-  /* box-shadow: 0px 0px 15px #0003; */
   box-shadow: 0 10px 10px rgba(0, 0, 0, 0.05); /* cambie las sombras por unas mas claras. son las mismas que uso en los elementos de arriba, es para que tenga mas coherencia visual */
   background-color: transparent;
   border-radius: 4px;
@@ -267,7 +293,6 @@ input, textarea {
   width: 100%;
   height: 100vh;
   background-image: url('images/paisaje-nublado-con-gata-italia-small.jpeg'); /* Imagen de fondo */
-  filter: brightness(0.6);
   background-size: cover;
   background-position: center;
   display: flex;
@@ -306,6 +331,11 @@ textarea {
   resize: none;
 }
 
+input:focus, textarea:focus {
+  outline: none; /* Quita el borde predeterminado */
+  border-color: #007bff; /* Color azul que ya usas en otros elementos */
+}
+
 .opcion-button {
   display: block;
   margin: 20px auto;
@@ -334,6 +364,98 @@ textarea {
 
 .form_button:hover {
   background-color: #218838;
+}
+
+@media (max-width: 768px) {
+  .nav::before {
+    display: block;
+    z-index: 100;
+  }
+
+  .nav .container {
+    display: none;
+    padding: 60px;
+    height: 100vh;
+    padding-bottom: 50%;
+  }
+
+  .nav.active .container {
+    background-color: #fff;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .nav.active .nav-list {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .nav-list li {
+    margin-bottom: 50%;
+  }
+
+  .contacto-btn {
+    display: none;
+  }
+
+  .contacto-list {
+    display: block;
+    background: transparent;
+  }
+
+
+  .nav.active ~ .container-inicio,
+  .nav.active ~ .container-swiper,
+  .nav.active ~ .container_formulario {
+    filter: brightness(0.5);
+    transition: filter 0.4s ease;
+    pointer-events: none; /* Evita la interacción con los elementos */
+  }
+
+  .form {
+    width: 300px;
+  }
+
+  .card-list .card-link .card-title {
+    font-size: 0.8rem;
+  }
+
+  .card-list .card-link .badge {
+    font-size: 0.8rem;
+  }
+
+  .container-inicio {
+    background-size: auto;
+  }
+
+  .information {
+    width: 70%;
+    height: 80%;
+  }
+
+
+  .a {
+    left: -10%;
+  }
+
+  .b {
+    display: none;
+  }
+
+}
+
+@media (max-width: 430px) {
+  .information {
+    width: 80%;
+    height: 80%;
+    padding-left: 7%;
+    padding-right: 7%;
+  }
+
+  .text {
+    font-size: 1rem;
+  }
 }
 
 
