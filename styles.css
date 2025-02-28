@@ -91,7 +91,7 @@
 .contacto-list a {
   text-decoration: none;
   color: #000;
-  display: inline-block;
+  display: block;
 }
 
 .contacto-list a:hover {
@@ -133,6 +133,12 @@
   font-weight: 550;
   font-size: 1.2rem;
   text-align: center;
+}
+
+@media (max-width: 430px) {
+  .a {
+    display: none
+  }
 }
 
 @media (max-width: 900px) {
@@ -400,8 +406,13 @@ input:focus, textarea:focus {
   }
 
   .contacto-list {
+    background-color: #0056b3;
     display: block;
-    background: transparent;
+  }
+
+  .contacto-list li {
+    margin: 0; /* Elimina cualquier margen */
+    padding: 0; /* Opcional, por si hay algún espacio interno */
   }
 
 
@@ -457,6 +468,43 @@ input:focus, textarea:focus {
     font-size: 1rem;
   }
 }
+
+.footer {
+  background-color: #4a6a8a;
+  color: white;
+  text-align: center;
+  padding: 1rem 0;
+  margin-top: 2rem;
+}
+
+.container-footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.footer-social {
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+  padding: 0;
+  margin-top: 0.5rem;
+}
+
+.footer-social li {
+  display: inline;
+}
+
+.footer-social a {
+  color: white;
+  font-size: 1.5rem;
+  transition: color 0.3s;
+}
+
+.footer-social a:hover {
+  color: #e0e0e0;
+}
+
 
 
 /* 
