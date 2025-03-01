@@ -173,24 +173,6 @@
   right: 10%;
 }
 
-@media (max-width: 500px) {
-  .a {
-    display: none
-  }
-}
-
-@media (max-height: 750px) {
-  .b, .a {
-    display: none;
-  }
-}
-
-@media (max-width: 1100px) {
-  .b {
-    display: none;
-  }
-}
-
 .container-swiper {
   display: flex;
   align-items: center;
