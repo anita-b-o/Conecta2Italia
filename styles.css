@@ -160,17 +160,41 @@
 }
 
 .a {
-  max-width: 350px;
-  min-width: 220px;
-  width: 20%;
-  left: 8%;
+  max-width: 310px;
+  left: 10%;
+  bottom: -17%;
 }
 
 .b {
-  max-width: 235px;
-  min-width: 150px;
-  width: 25%;
-  right: 10%;
+  max-width: 310px;
+  right: 13%;
+  bottom: -12%;
+}
+
+@media (max-height: 700px) {
+  .a, .b {
+    display: none;
+  }
+} 
+
+@media (max-width: 1300px) {
+  .a {
+    left: 5%;
+  }
+
+  .b {
+    right: 10%;
+  }
+}
+
+@media (max-width: 950px) {
+  .a {
+    left: 0;
+  }
+
+  .b {
+    right: 6%;
+  }
 }
 
 .container-swiper {
@@ -573,11 +597,7 @@ input:focus, textarea:focus {
   }
 
 
-  .a {
-    left: -2%;
-  }
-
-  .b {
+  .a, .b {
     display: none;
   }
 
