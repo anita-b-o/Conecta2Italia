@@ -563,7 +563,8 @@ input:focus, textarea:focus {
 
   .nav.active ~ .container-inicio,
   .nav.active ~ .container-swiper,
-  .nav.active ~ .container_formulario {
+  .nav.active ~ .container_formulario,
+  .nav.active ~ .references {
     filter: brightness(0.5);
     transition: filter 0.4s ease;
     pointer-events: none; /* Evita la interacción con los elementos */
