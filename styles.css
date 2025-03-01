@@ -126,19 +126,20 @@
   box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2);
   padding-left: 5%;
   padding-right: 5%;
+  overflow: hidden;
+}
+
+@media (min-height: 800px) {
+  .information {
+    max-height: 450px;
+  }
 }
 
 .text {
-  color: #4a6a8a;
+  color: #293a4a;
   font-weight: 550;
   font-size: 1.2rem;
   text-align: center;
-}
-
-@media (max-width: 430px) {
-  .a {
-    display: none
-  }
 }
 
 @media (max-width: 900px) {
@@ -161,15 +162,35 @@
 .a {
   max-width: 350px;
   min-width: 220px;
-  width: 50%;
+  width: 20%;
+  left: 8%;
 }
 
 .b {
   max-width: 235px;
   min-width: 150px;
-  width: 35%;
-  right: 5%;
+  width: 25%;
+  right: 10%;
 }
+
+@media (max-width: 500px) {
+  .a {
+    display: none
+  }
+}
+
+@media (max-height: 750px) {
+  .b, .a {
+    display: none;
+  }
+}
+
+@media (max-width: 1100px) {
+  .b {
+    display: none;
+  }
+}
+
 .container-swiper {
   display: flex;
   align-items: center;
@@ -298,7 +319,7 @@ input, textarea {
 .container_formulario {
   width: 100%;
   height: 100vh;
-  background-image: url('images/paisaje-nublado-con-gata-italia-small.jpeg'); /* Imagen de fondo */
+  background-image: url('images/paisaje_nublado_con_gata_italia.jpeg'); /* Imagen de fondo */
   background-size: cover;
   background-position: center;
   display: flex;
@@ -372,142 +393,44 @@ input:focus, textarea:focus {
   background-color: #218838;
 }
 
-@media (max-width: 768px) {
-  .nav::before {
-    display: block;
-    z-index: 100;
-  }
-
-  .nav .container {
-    display: none;
-    padding: 60px;
-    height: 100vh;
-    padding-bottom: 50%;
-  }
-
-  .nav.active .container {
-    background-color: #fff;
-    position: absolute;
-    display: flex;
-    flex-direction: column;
-  }
-
-  .nav.active .nav-list {
-    display: flex;
-    flex-direction: column;
-  }
-
-  .nav-list li {
-    margin-bottom: 50%;
-  }
-
-  .contacto-btn {
-    display: none;
-  }
-
-  .contacto-list {
-    background-color: #0056b3;
-    display: block;
-  }
-
-  .contacto-list li {
-    margin: 0; /* Elimina cualquier margen */
-    padding: 0; /* Opcional, por si hay algún espacio interno */
-  }
-
-
-  .nav.active ~ .container-inicio,
-  .nav.active ~ .container-swiper,
-  .nav.active ~ .container_formulario {
-    filter: brightness(0.5);
-    transition: filter 0.4s ease;
-    pointer-events: none; /* Evita la interacción con los elementos */
-  }
-
-  .form {
-    width: 300px;
-  }
-
-  .card-list .card-link .card-title {
-    font-size: 0.8rem;
-  }
-
-  .card-list .card-link .badge {
-    font-size: 0.8rem;
-  }
-
-  .container-inicio {
-    background-size: auto;
-  }
-
-  .information {
-    width: 70%;
-    height: 80%;
-  }
-
-
-  .a {
-    left: -10%;
-  }
-
-  .b {
-    display: none;
-  }
-
+.references {
+  background-color: #a0bccc;
+  padding: 10%;
 }
 
-@media (max-width: 430px) {
-  .information {
-    width: 80%;
-    height: 80%;
-    padding-left: 7%;
-    padding-right: 7%;
-  }
-
-  .text {
-    font-size: 1rem;
-  }
-}
-
-<<<<<<< HEAD
-.footer {
-  background-color: #4a6a8a;
-  color: white;
+.references-title {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #fff;
   text-align: center;
-  padding: 1rem 0;
-  margin-top: 2rem;
+  margin-bottom: 15px;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
 }
 
-.container-footer {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+.references-text {
+  font-size: 1.2rem;
+  color: #464d70;
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto;
+  line-height: 1.6;
 }
 
-.footer-social {
-  list-style: none;
-  display: flex;
-  gap: 1rem;
-  padding: 0;
-  margin-top: 0.5rem;
+.references {
+  background-color: #a0bccc;
+  padding: 10%;
 }
 
-.footer-social li {
-  display: inline;
+.references-title {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #fff;
+  text-align: center;
+  margin-bottom: 15px;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
 }
-
-.footer-social a {
-  color: white;
-  font-size: 1.5rem;
-  transition: color 0.3s;
-}
-
-.footer-social a:hover {
-  color: #e0e0e0;
-}
-
-
-=======
 .slider-frame {
   width: 100vw;   /* Ocupa todo el ancho de la pantalla */
   max-width: 100%; /* Asegura que no sobrepase el ancho */
@@ -582,11 +505,158 @@ input:focus, textarea:focus {
   }
 }
 
+@media (max-width: 768px) {
+  .nav::before {
+    display: block;
+    z-index: 100;
+  }
+
+  .nav .container {
+    display: none;
+    padding: 60px;
+    height: 100vh;
+    padding-bottom: 50%;
+  }
+
+  .nav.active .container {
+    background-color: #fff;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .nav.active .nav-list {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .nav-list li {
+    margin-bottom: 50%;
+  }
+
+  .nav-list li:nth-child(3) {
+    margin-bottom: 0px;
+  }
+
+  .contacto-btn {
+    display: none;
+    position: relative;
+  }
+
+  .contacto-list {
+    display: block;
+    position: absolute;
+    width: 100%;
+    left: 30px;
+    background: transparent;
+  }
+
+  .contacto-list li {
+    margin: 0; /* Elimina cualquier margen */
+    padding: 10px; /* Opcional, por si hay algún espacio interno */
+  }
+
+  .nav-contact {
+    margin-top: 150%;
+  }
+
+
+  .nav.active ~ .container-inicio,
+  .nav.active ~ .container-swiper,
+  .nav.active ~ .container_formulario {
+    filter: brightness(0.5);
+    transition: filter 0.4s ease;
+    pointer-events: none; /* Evita la interacción con los elementos */
+  }
+
+  .form {
+    width: 300px;
+  }
+
+  .card-list .card-link .card-title {
+    font-size: 0.8rem;
+  }
+
+  .card-list .card-link .badge {
+    font-size: 0.8rem;
+  }
+
+  .container-inicio {
+    background-size: auto;
+  }
+
+  .information {
+    width: 70%;
+  }
+
+
+  .a {
+    left: -2%;
+  }
+
+  .b {
+    display: none;
+  }
+
+  .references-title {
+    font-size: 1.5rem;
+
+  }
+
+}
+
+@media (max-width: 430px) {
+  .information {
+    width: 80%;
+    height: 80%;
+    padding-left: 7%;
+    padding-right: 7%;
+  }
+
+  .text {
+    font-size: 1rem;
+  }
+}
+
+
+.footer {
+  background-color: #4a6a8a;
+  color: white;
+  text-align: center;
+  padding: 1rem 0;
+  margin-top: 2rem;
+}
+
+.container-footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.footer-social {
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+  padding: 0;
+  margin-top: 0.5rem;
+}
+
+.footer-social li {
+  display: inline;
+}
+
+.footer-social a {
+  color: white;
+  font-size: 1.5rem;
+  transition: color 0.3s;
+}
+
+.footer-social a:hover {
+  color: #e0e0e0;
+}
 
 
 
-
->>>>>>> d3cc3cc (agregue imagenes provisorias y el slidel-frame)
 
 /* 
 .color1 { #ab8052; }  Marrón claro 
