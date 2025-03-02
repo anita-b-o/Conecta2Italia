@@ -149,6 +149,10 @@
 
 }
 
+.a, .b {
+  display: none;
+}
+/*
 .container-images {
   position: relative;
   height: 70vh;
@@ -170,32 +174,7 @@
   right: 13%;
   bottom: -12%;
 }
-
-@media (max-height: 700px) {
-  .a, .b {
-    display: none;
-  }
-} 
-
-@media (max-width: 1300px) {
-  .a {
-    left: 5%;
-  }
-
-  .b {
-    right: 10%;
-  }
-}
-
-@media (max-width: 950px) {
-  .a {
-    left: 0;
-  }
-
-  .b {
-    right: 6%;
-  }
-}
+*/
 
 .container-swiper {
   display: flex;
@@ -549,12 +528,12 @@ input:focus, textarea:focus {
     position: relative;
   }
 
-  .contacto-list {
-    display: block;
+  .contacto-list{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     position: absolute;
-    width: 100%;
-    left: 30px;
-    background: transparent;
+    left: 10px;
   }
 
   .contacto-list li {
@@ -594,11 +573,6 @@ input:focus, textarea:focus {
 
   .information {
     width: 70%;
-  }
-
-
-  .a, .b {
-    display: none;
   }
 
   .references-title {

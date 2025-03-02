@@ -12,7 +12,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         exit;
     }
 
-    $destinatario = "tucorreo@ejemplo.com"; // Cambia esto por tu correo
+    $destinatario = "anitaormellob@ejemplo.com"; // Cambia esto por tu correo
     $asunto = "Nuevo mensaje de contacto: $opcionSeleccionada";
 
     $cuerpo = "Nombre: $nombre\n";
@@ -22,7 +22,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $cuerpo .= "Motivo de contacto: $opcionSeleccionada\n";
 
     // Mejor usar un correo de tu dominio en 'From'
-    $cabeceras = "From: noreply@tudominio.com\r\n";
+    $cabeceras = "From: anitaormellob@gmail.com\r\n";
     $cabeceras .= "Reply-To: $email\r\n";
     $cabeceras .= "Content-Type: text/plain; charset=UTF-8\r\n";
 
