@@ -45,7 +45,7 @@
   .social {
     z-index: 6000;
     position: fixed;
-    top: 50%;
+    top: 40%;
   }
   .social a {
     text-decoration: none;

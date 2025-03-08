@@ -119,7 +119,7 @@
     </div>
   </div>
   <div id="contacto" class="container_formulario">
-    <form class="form" id="contact-form" action="send_email.php" method="POST">
+    <form class="form" id="contact-form" method="POST">
       <h2 class="form-title">Formulario de contacto</h2>
         <div class="form_input">
             <input type="text" id="nombre" name="nombre" placeholder="Nombre completo">
@@ -133,10 +133,6 @@
         <div class="form_input">
             <textarea id="mensaje" class="form_input-textarea" name="mensaje" placeholder="Motivo de interés"></textarea>
         </div>
-
-        <!-- Input oculto para la opción seleccionada -->
-        <input type="hidden" id="opcionSeleccionada" name="opcionSeleccionada" value="Entrevista de Asesoramiento"> 
-        
         <div class="form_input">
             <button type="submit" class="form_button">Enviar</button>
         </div>
