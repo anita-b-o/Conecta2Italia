@@ -1,38 +1,47 @@
 <?php
 require __DIR__ . '/vendor/autoload.php';
 
-// Verificar si la solicitud es POST
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    // Verificar que los datos estén presentes
-    if (isset($_POST['email']) && isset($_POST['message'])) {
-        // Obtener los datos enviados a través de AJAX
-        $email = $_POST['email'];
-        $message = $_POST['message'];
+    // Validar y limpiar los datos
+    $nombre = isset($_POST['nombre']) ? trim(htmlspecialchars($_POST['nombre'])) : '';
+    $telefono = isset($_POST['telefono']) ? trim(htmlspecialchars($_POST['telefono'])) : '';
+    $email = isset($_POST['email']) ? filter_var(trim($_POST['email']), FILTER_VALIDATE_EMAIL) : false;
+    $mensaje = isset($_POST['mensaje']) ? trim(htmlspecialchars($_POST['mensaje'])) : '';
 
-        // Crear el cliente de Resend
-        $resend = Resend::client('re_Y44BwwEC_9oYuYWPixmvCfAJdCeeTabgh');
+    $contenidoCorreo = "<h3>Nuevo mensaje de contacto</h3>";
 
-        try {
-            // Enviar correo electrónico
-            $result = $resend->emails->send([
-                'from' => 'Acme <onboarding@resend.dev>',
-                'to' => [$email],  // Usar el correo proporcionado por el formulario
-                'subject' => 'Gracias por tu mensaje',
-                'html' => '<strong>Gracias por tu mensaje: </strong>' . htmlspecialchars($message),
-            ]);
+    if (!empty($nombre)) {
+        $errores[] = "El nombre es obligatorio.";
+        $contenidoCorreo .= "<p><strong>Nombre:</strong> $nombre</p>";
+    }
+    if (!empty($telefono)) {
+        $errores[] = "El teléfono es obligatorio.";
+        $contenidoCorreo .= "<p><strong>Teléfono:</strong> $telefono</p>";
+    }
+    if ($email) { 
+        $contenidoCorreo .= "<p><strong>Email:</strong> $email</p>";
+    }
+    if (!empty($mensaje)) {
+        $contenidoCorreo .= "<p><strong>Mensaje:</strong><br>$mensaje</p>";
+    }
+    
+    // Configurar el cliente de Resend
+    $resend = Resend::client('re_Y44BwwEC_9oYuYWPixmvCfAJdCeeTabgh');
 
-            // Respuesta JSON al cliente
-            echo json_encode(['status' => 'success', 'message' => 'Correo enviado correctamente']);
-        } catch (\Exception $e) {
-            // Manejo de errores
-            echo json_encode(['status' => 'error', 'message' => 'Error: ' . $e->getMessage()]);
-        }
-    } else {
-        // Si falta algún dato
-        echo json_encode(['status' => 'error', 'message' => 'Datos incompletos']);
+    try {
+        // Enviar correo
+        $resend->emails->send([
+            'from' => 'Acme <onboarding@resend.dev>',
+            'to' => ['conecta2italia@gmail.com'],
+            'subject' => 'Gracias por tu mensaje',
+            'html' => $contenidoCorreo
+        ]);
+
+        echo "El correo se ha enviado correctamente.";
+    } catch (\Exception $e) {
+        echo "Error al enviar el correo: " . $e->getMessage();
     }
 } else {
-    // Método no permitido
-    echo json_encode(['status' => 'error', 'message' => 'Método no permitido']);
+    echo "Método no permitido.";
 }
 ?>

@@ -28,45 +28,19 @@ new Swiper('.card-wrapper', {
   }
 });
 
-document.getElementById('contact-form').addEventListener('submit', function(event) {
-  event.preventDefault();  // Evita el envío del formulario
+function redirigirAlFormulario(button) {
+  // Obtener el valor del atributo 'data-option' del botón clickeado
+  var opcionSeleccionada = button.getAttribute('data-option');
+  
+  // Asignar el valor a el campo oculto
+  document.getElementById('opcionSeleccionada').value = opcionSeleccionada;
 
-  // Recoger los datos del formulario
-  const nombre = document.getElementById('nombre').value;
-  const telefono = document.getElementById('telefono').value;
-  const email = document.getElementById('email').value;
-  const mensaje = document.getElementById('mensaje').value;
-  const opcion = document.getElementById('opciones') ? document.getElementById('opciones').value : null;
+  var formularioSection = document.getElementById('contacto');  // Suponiendo que tu formulario está dentro de un div con id 'contacto'
 
-  // Preparar los datos para el backend
-  const datosFormulario = {
-      nombre: nombre,
-      telefono: telefono,
-      email: email,
-      mensaje: mensaje,
-      opcionSeleccionada: opcion
-  };
-
-  // Llamar a la API del backend usando fetch
-  fetch('/mailer.php', {
-    method: 'POST',
-    body: JSON.stringify(datosFormulario)
-  })
-  .then(response => response.json())
-  .then(data => {
-    console.log('Correo enviado con éxito', data);
-  })
-  .catch(error => {
-    console.error('Error al enviar el correo', error);
-    alert('Hubo un error al enviar el correo');
-  });
-});
-
-
-function redirigirAlFormulario(servicio) {
-  localStorage.setItem("opcionSeleccionada", servicio); // Guarda la opción elegida
-  window.location.href = "#contacto"; // Redirige al formulario
+  // Desplazar hacia el formulario para que sea visible (si está fuera de la vista)
+  formularioSection.scrollIntoView({behavior: "smooth"});
 }
+
 
 document.addEventListener("DOMContentLoaded", function () {
   const nav = document.querySelector(".nav");
