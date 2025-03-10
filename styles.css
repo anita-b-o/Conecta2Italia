@@ -617,17 +617,16 @@ input:focus, textarea:focus {
   .contacto-list{
     display: flex;
     flex-direction: column;
-    align-items: start;
     left: 0;
+  }
+
+  .bottom {
+    margin-top: -40px;
   }
 
   .contacto-list li {
     margin: 0; /* Elimina cualquier margen */
     padding: 10px; /* Opcional, por si hay algún espacio interno */
-  }
-
-  .nav-contact {
-    margin-top: 150%;
   }
 
 
