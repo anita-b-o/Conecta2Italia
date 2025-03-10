@@ -66,3 +66,19 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
 });
+
+  document.addEventListener("DOMContentLoaded", function () {
+    var whatsappLink = document.getElementById("whatsapp-link");
+    var phone = "393501482331";
+    // Mensaje opcional, codificado para URL
+    var text = encodeURIComponent("Hola, deseo más información.");
+    
+    // Detectar si el usuario está en un dispositivo móvil
+    if (/Android|iPhone|iPad|iPod/i.test(navigator.userAgent)) {
+      // Para móviles se usa la URL por defecto, que abre la app de WhatsApp
+      whatsappLink.href = `https://api.whatsapp.com/send?phone=${phone}&text=${text}`;
+    } else {
+      // Para escritorio se forza WhatsApp Web
+      whatsappLink.href = `https://web.whatsapp.com/send?phone=${phone}&text=${text}`;
+    }
+  });
